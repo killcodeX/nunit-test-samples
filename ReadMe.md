@@ -96,7 +96,7 @@ public class LoginTests
 
 Then run specific categories:
 
-```
+```bash
 cd PracticePageTests
 dotnet test --filter "TestCategory=Smoke"
 ```

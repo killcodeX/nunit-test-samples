@@ -102,3 +102,4 @@ D:\Projects\nunit-test-samples\PracticePageTests\obj\Debug\net9.0\refint\Practic
 D:\Projects\nunit-test-samples\PracticePageTests\obj\Debug\net9.0\PracticePageTests.pdb
 D:\Projects\nunit-test-samples\PracticePageTests\obj\Debug\net9.0\PracticePageTests.genruntimeconfig.cache
 D:\Projects\nunit-test-samples\PracticePageTests\obj\Debug\net9.0\ref\PracticePageTests.dll
+D:\Projects\nunit-test-samples\PracticePageTests\bin\Debug\net9.0\WebDriver.Support.dll

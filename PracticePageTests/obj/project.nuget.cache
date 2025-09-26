@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cX5sklrKx5o=",
+  "dgSpecHash": "tQl9jJGmdtQ=",
   "success": true,
   "projectFilePath": "D:\\Projects\\nunit-test-samples\\PracticePageTests\\PracticePageTests.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Users\\aaqui\\.nuget\\packages\\nunit\\4.2.2\\nunit.4.2.2.nupkg.sha512",
     "C:\\Users\\aaqui\\.nuget\\packages\\nunit.analyzers\\4.4.0\\nunit.analyzers.4.4.0.nupkg.sha512",
     "C:\\Users\\aaqui\\.nuget\\packages\\nunit3testadapter\\4.6.0\\nunit3testadapter.4.6.0.nupkg.sha512",
+    "C:\\Users\\aaqui\\.nuget\\packages\\selenium.support\\4.35.0\\selenium.support.4.35.0.nupkg.sha512",
     "C:\\Users\\aaqui\\.nuget\\packages\\selenium.webdriver\\4.35.0\\selenium.webdriver.4.35.0.nupkg.sha512",
     "C:\\Users\\aaqui\\.nuget\\packages\\selenium.webdriver.chromedriver\\140.0.7339.20700\\selenium.webdriver.chromedriver.140.0.7339.20700.nupkg.sha512",
     "C:\\Users\\aaqui\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512"

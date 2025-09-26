@@ -66,6 +66,10 @@
               "target": "Package",
               "version": "[4.6.0, )"
             },
+            "Selenium.Support": {
+              "target": "Package",
+              "version": "[4.35.0, )"
+            },
             "Selenium.WebDriver": {
               "target": "Package",
               "version": "[4.35.0, )"

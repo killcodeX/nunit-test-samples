@@ -41,7 +41,7 @@ public class Tests
             // testing radio component
             IWebElement radioElem = webDriver.FindElement(By.Id("radio-btn-example"));
             RadioTest radioComp = new RadioTest(radioElem, "radioButton");
-            
+
             // Find radio button by name and value
             IWebElement radioButton = webDriver.FindElement(By.CssSelector($"input[name='radioButton'][value='radio1']"));
             radioComp.selectOptionByValue(radioButton);
@@ -49,6 +49,18 @@ public class Tests
             // Find radio button by its label text
             // IWebElement label = driver.FindElement(By.XPath($"//label[text()='{labelText}']"));
             // radioComp.selectOptionByText(label);
+
+            // testing checkbox component
+            IWebElement checkboxElem = webDriver.FindElement(By.Id("checkbox-example"));
+            CheckBoxTest checkboxComp = new CheckBoxTest(checkboxElem);
+            IWebElement checkBoxOption = webDriver.FindElement(By.CssSelector($"input[name='checkBoxOption1'][value='option1']"));
+            checkboxComp.checkOption(checkBoxOption);
+
+            // testing mouse component
+            IWebElement mouseElem = webDriver.FindElement(By.Id("mousehover"));
+            IWebElement mouseTargetElem = webDriver.FindElement(By.CssSelector("a[href='#top']"));
+            MouseTests mouseComp = new MouseTests(mouseElem, webDriver);
+            mouseComp.HoverThenClickElement(mouseTargetElem);
 
             Thread.Sleep(5000); // Wait to see search results
         }

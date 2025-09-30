@@ -62,6 +62,23 @@ public class Tests
             MouseTests mouseComp = new MouseTests(mouseElem, webDriver);
             mouseComp.HoverThenClickElement(mouseTargetElem);
 
+            // testing new window component
+            IWebElement windowBtn = webDriver.FindElement(By.Id("openwindow"));
+            WindowTest windowTest = new WindowTest(webDriver);
+            windowBtn.Click();
+
+            if (windowTest.IsNewWindowAvailable())
+            {
+                windowTest.SwitchToNewWindow();
+
+                string newWindowTitle = windowTest.GetCurrentWindowTitle();
+                Console.WriteLine($"New window title: {newWindowTitle}");
+
+                //now close and switch back to orignal window
+                windowTest.CloseCurrentWindow().SwitchToOriginalWindow();
+            }
+
+
             Thread.Sleep(5000); // Wait to see search results
         }
         catch (Exception ex)

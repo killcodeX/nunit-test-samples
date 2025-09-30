@@ -56,11 +56,15 @@ public class Tests
             IWebElement checkBoxOption = webDriver.FindElement(By.CssSelector($"input[name='checkBoxOption1'][value='option1']"));
             checkboxComp.checkOption(checkBoxOption);
 
+            Thread.Sleep(2000);
+
             // testing mouse component
             IWebElement mouseElem = webDriver.FindElement(By.Id("mousehover"));
             IWebElement mouseTargetElem = webDriver.FindElement(By.CssSelector("a[href='#top']"));
             MouseTests mouseComp = new MouseTests(mouseElem, webDriver);
             mouseComp.HoverThenClickElement(mouseTargetElem);
+
+            Thread.Sleep(2000);
 
             // testing new window component
             IWebElement windowBtn = webDriver.FindElement(By.Id("openwindow"));
@@ -76,6 +80,47 @@ public class Tests
 
                 //now close and switch back to orignal window
                 windowTest.CloseCurrentWindow().SwitchToOriginalWindow();
+            }
+
+            Thread.Sleep(2000);
+
+            // testing new tab component
+            IWebElement tabBtn = webDriver.FindElement(By.Id("opentab"));
+            WindowTest tabTest = new WindowTest(webDriver);
+            tabBtn.Click();
+
+            if (tabTest.IsNewWindowAvailable())
+            {
+                tabTest.SwitchToNewWindow();
+
+                string newWindowTitle = tabTest.GetCurrentWindowTitle();
+                Console.WriteLine($"New window title: {newWindowTitle}");
+
+                //now close and switch back to orignal window
+                tabTest.CloseCurrentWindow().SwitchToOriginalWindow();
+            }
+
+            Thread.Sleep(2000);
+
+            // testing alert component
+            IWebElement alertBtn = webDriver.FindElement(By.Id("alertbtn"));
+            IWebElement confirmBtn = webDriver.FindElement(By.Id("confirmbtn"));
+            AlertTest alertComp = new AlertTest(webDriver);
+            alertBtn.Click();
+
+            if (alertComp.IsAlertPresent())
+            {
+                alertComp.AcceptAlert();
+            }
+
+            Thread.Sleep(2000);
+
+            // testing alert component
+            confirmBtn.Click();
+
+            if (alertComp.IsAlertPresent())
+            {
+                alertComp.AcceptAlert();
             }
 
 

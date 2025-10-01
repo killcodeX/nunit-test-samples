@@ -123,6 +123,27 @@ public class Tests
                 alertComp.AcceptAlert();
             }
 
+            // testing Iframe component
+            FrameTest frameComp = new FrameTest(webDriver);
+            Console.WriteLine("Before switching to frame");
+
+            if (frameComp.IsFrameAvailable(By.Id("courses-iframe")))
+            {
+                Console.WriteLine("Successfully switched to frame!");
+
+                // Now interact with elements INSIDE the frame
+                IWebElement link = webDriver.FindElement(By.XPath("/html/body/div/header/div[3]/div/div/div[2]/nav/div[2]/ul/li[2]/a"));
+                link.Click();
+
+                // Switch back to main page
+                frameComp.SwitchToDefaultContent();
+
+                Console.WriteLine("Switched back to main page");
+            }
+            else
+            {
+                Console.WriteLine("Frame not found!");
+            }
 
             Thread.Sleep(5000); // Wait to see search results
         }
